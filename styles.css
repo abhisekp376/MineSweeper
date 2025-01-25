@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+#game-container {
+    margin: 20px auto;
+    width: 320px;
+}
+
+#minefield {
+    display: grid;
+    margin: 20px 0;
+    gap: 2px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell.mine {
+    background-color: red;
+}
+
+.cell.revealed {
+    background-color: #eee;
+    cursor: default;
+}
+
+.cell.flag {
+    background-color: #ffa500;
+    content: '🚩';
+}
+
+.cell.flag::after {
+    content: '🚩';
+    font-size: 18px;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#restart-button:hover {
+    background-color: #0056b3;
+}
